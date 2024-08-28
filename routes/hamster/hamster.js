@@ -64,7 +64,7 @@ async function callApi() {
 // Endpoint to start API calls
 router.get("/start-api-calls", (req, res) => {
   if (!intervalId) {
-    intervalId = setInterval(callApi, 1000); // Call the API every 1 second
+    intervalId = setInterval(callApi, 5000); // Call the API every 1 second
     console.log("Started API calls every 1 second.");
     res.json({ message: "API calls started." });
   } else {
